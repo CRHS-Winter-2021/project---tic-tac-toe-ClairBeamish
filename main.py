@@ -1,9 +1,11 @@
 ##Tic Tac Toe
-#Name:
-#Date:
+#Name: Clarissa Beamish
+#Date: 02/10/21
+
 
 #1. (Var) Setup the empty board as a list
-theBoard = []
+theBoard = [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "]
+B1 = ["X", " ", "O", " ", " ", " ", "X", " ", " ", " "]
 
 #2. (fun) Print the board.
 #in: a 10 item list (either x, o or ' ')
@@ -11,7 +13,11 @@ theBoard = []
 #out: none
 
 def printBoard(board):
-    pass
+  print(board[7], "|", board[8], "|", board[9])
+  print("--+---+--")
+  print(board[4], "|", board[5], "|", board[6])
+  print("--+---+--")
+  print(board[1], "|", board[2], "|", board[3])
 
 #3a. (fun) Determine if player is X or O
 player1 = ''
@@ -22,12 +28,28 @@ player2 = ''
 #out: None
 
 def chooseLetter():
-    pass
+    print("x or o?")
+    choice = input()
+    if choice == "x":
+      player1 = "x"
+      player2 = "o"
+    elif choice == "o":
+      player1 == "o"
+      player2 == "x"
+    else:
+      print("Try again")
 
 
 #3b. (fun) Choose starting player 1 or 2
 def chooseStart():
-    pass
+  print("Who will start? (player 1 or 2)")
+  player = input()
+  if player == "1":
+    player = "e"
+  elif player == "2":
+    player = "t"
+  else:
+    print("Try again")
 
 #4. (fun) Get player move
 #in: board as list, player as X or O
@@ -37,6 +59,7 @@ def chooseStart():
 #out: none
 
 def playerMove(board, player):
+  
     pass
 
 
@@ -63,7 +86,9 @@ def checkFull(board):
 
 def main():
     #print Welcome
+    print("Welcome to the TicTacToe game!")
     #print instructions
+    print("instructions: your goal ")
 
     #game play
     #get player letter choice
@@ -79,7 +104,3 @@ def main():
         #player chooses move
         #print baord
         #check win
-    
-    
-    pass
-
